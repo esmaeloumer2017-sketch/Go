@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="am" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ጎረንጅ መስጅደል አል አቅሷ | Gorenj Mesjid Al Aqsua</title>
+    <style>
+        :root {
+            --primary-blue: #0A3D73; /* ጥቁር ሰማያዊ */
+            --accent-blue: #048CBA; /* ለግላጭ ሰማያዊ */
+            --white: #ffffff;
+            --light-gray: #f4f7f6;
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-gray);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Container for boxing content */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary-blue);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            color: white;
+            margin: 0;
+            font-size: 1.1rem;
+            padding-left: 10px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        /* Hero/Photo Section */
+        .hero {
+            background-color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .hero h2 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin: 10px 0;
+            border: none;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        /* 📸 This is where your image goes */
+        .masjid-photo {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            border: 4px solid var(--white);
+        }
+
+        /* Content Sections */
+        .section {
+            background-color: var(--white);
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            border-bottom: 3px solid var(--accent-blue);
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        /* Quotes */
+        .quote-box {
+            background: rgba(4, 140, 186, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 6px solid var(--accent-blue);
+        }
+
+        .arabic {
+            direction: rtl;
+            font-size: 1.25rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #111;
+            text-align: right;
+            line-height: 1.4;
+        }
+
+        /* Donation Section */
+        .card {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+
+        .acc-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: block;
+            margin: 20px 0;
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px dashed white;
+            letter-spacing: 2px;
+        }
+
+        /* Contact Section */
+        .contact-details {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            background: var(--light-gray);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        /* Form styling */
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: var(--light-gray);
+        }
+
+        button {
+            background-color: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #b3b3b3;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+            margin-top: 30px;
+        }
+
+        .creator {
+            color: var(--accent-blue);
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 600px) {
+            .hero h2 { font-size: 1.4rem; }
+            .acc-number { font-size: 1.4rem; }
+            h2 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container nav-content">
+        <h1>ጎረንጅ መስጅደል አል አቅሷ</h1>
+        <div class="nav-links">
+            <a href="#about">ስለ እኛ</a>
+            <a href="#donate">ለጋሽ</a>
+            <a href="#contact">አግኙን</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <section class="hero">
+        <h2>Gorenj Mesjid Al Aqsua</h2>
+        <p>በእስማኢል ኡመር የሚመራ የብርሃን ማዕከል</p>
+        <img src="https://postimg.cc/cvHCktnm" alt="የጎረንጅ መስጅደል አል አቅሷ ፎቶ" class="masjid-photo">
+    </section>
+
+    <section class="section" id="about">
+        <h2>ስለ መስጅዱ (About)</h2>
+        <p>ጎረንጅ መስጅደል አል አቅሷ ማህበረሰባችንን በኢስላማዊ እውቀት፣ በአንድነትና በሰላም የሚያገለግል የብርሃን ማዕከል ነው።</p>
+        
+        <div class="quote-box">
+            <span class="arabic">"إِنَّمَا يَعْمُرُ مَسَاجِدَ اللَّهِ مَنْ آمَنَ بِاللَّهِ وَالْيَوْمِ الْآخِرِ"</span>
+            <p><strong>ትርጉም፡</strong> "የአላህን መስጊዶች የሚገነባውና የሚያድሰው በአላህና በመጨረሻው ቀን ያመነ ሰው ብቻ ነው።" (ሱረቱ አት-ተውባህ፡ 18)</p>
+        </div>
+
+        <div class="quote-box">
+            <span class="arabic">قال النبي ﷺ: "مَنْ بَنَى مَسْجِدًا لِلَّهِ بَنَى اللَّهُ لَهُ بَيْتًا فِي الْجَنَّةِ"</span>
+            <p><strong>ሐዲስ፡</strong> ነቢዩ (ሰ.ዐ.ወ) እንዲህ ብለዋል፡ "ለአላህ ብሎ መስጊድ የገነባ ሰው አላህ በጀነት ውስጥ ቤት ይገነባለታል።" (ቡኻሪና ሙስሊም)</p>
+        </div>
+    </section>
+
+    <section class="section" id="donate">
+        <div class="card">
+            <h2>ለጋሾች (Donate)</h2>
+            <p>ለመስጅዱ ግንባታና አገልግሎት ድጋፍ ለማድረግ በሚከተለው የባንክ አካውንት ገቢ ያድርጉ፡</p>
+            <span class="acc-number">1000751597887</span>
+            <p>የኢትዮጵያ ንግድ ባንክ (CBE)</p>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h2>አግኙን (Contact)</h2>
+        <div class="contact-details">
+            <p><strong>📞 ስልክ ቁጥሮች፡</strong><br>
+            0914661462 / 0926053136</p>
+        </div>
+        
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="ሙሉ ስምዎ">
+            <input type="email" name="email" placeholder="ኢሜይል አድራሻ (ካለዎት)">
+            <textarea name="message" placeholder="መልእክትዎ..." rows="5"></textarea>
+            <button type="submit">መልእክት ላክ</button>
+        </form>
+    </section>
+
+</div>
+
+<footer>
+    <div class="container">
+        © 2026 Gorenj Mesjid Al Aqsua. All Rights Reserved.
+        <span class="creator">አዘጋጅ ተማሪ እስማኢል ኡመር</span>
+    </div>
+</footer>
+
+</body>
+</html>
